@@ -1,0 +1,62 @@
+What is a program?
+    -Allocates memory
+    -Parse and execute scripts; read and run commands
+
+
+Chrome's V8 engine consists of 2 parts:
+    -Memory heap (where memory allocation happens)
+    -Call stack (where code is read and executed)
+
+Example of allocating memory:
+const a = 1;
+const b = 10;
+const c = 100;
+
+However, this example is actually a memory leak because they are global variables.
+Memory leaks happen when you have unused memory (such as the variables) laying around and not being used.
+Too many global variables will fill up the memory and slow down the browser
+
+//Call stack
+console.log('1'); //Output: 1
+console.log('2'); //Output: 2
+console.log('3'); // Output: 3
+
+A call stack reads the first line, executes it, then removes it and moves on to the next script.
+
+**IMPORTANT**
+Javascript is a single threaded language that can be non-blocking
+    -single threaded means one call stack (one thing a time) 
+
+Synchronous execution is good because its predictable, but can cause problems
+if a one of the stacks takes too long.
+
+//Asynchronous example:
+
+console.log('1');
+setTimeout(() => {
+    console.log('2');
+}, 2000)
+console.log('3');
+
+Output:
+1
+3
+2
+
+----------------------------------------------------------
+There's not just the Javascript engine, but the run-time environment, such as the Web APIs
+setTimeout is a Web API and not particularly from Javascript.
+There is also event loop and callback queue
+
+//CALL stack
+
+//WEB API
+
+//CALLBACK queue
+
+//EVENT loop
+
+setTimeout() will go through the Web API -> callback queue -> event loop
+    event loop is constantly checking if call stack is empty.
+    If it is, then it will check the callback queue if theres anything in it
+    Since setTimeout() is in callback, it will move to the call stack to be executed

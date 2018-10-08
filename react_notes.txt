@@ -1,0 +1,56 @@
+CSS
+    react allows us to add CSS not just in one file, but for each different component.
+
+Component
+    A component always has the role that it must render at least something
+    When naming a component, First Letter of file name must be capitalized
+
+
+
+Class Name
+    Although you can use 'class', react will give you an error to write 'className' instead.
+    React uses JSX, which allows you to write HTML-like syntax in your javascript file
+
+    Does not break separation of concern because each component are only concerned about themselves,
+    meaning they are in their own universe. Each component has its own css file to worry about, meaning
+    you don't have to worry about one big css file and making it easier to manage.
+
+    React creates a virtual DOM with HTML elements, however it is not actual HTML tags
+
+    Another thing is 'class' is a reserved keyword in Javascript.
+
+
+Props
+    Props can be called anything, think of them as HTML attributes
+
+Return
+    When using return(), you can only return one tag.
+        <h2></h2>
+        <div></div>
+    The above is not allowed.
+
+        <div>
+            <h2></h2>
+        </div>
+    This works 
+
+
+Array
+    When creating an array, it has to include a key element 
+    to have a unique key per element
+
+State
+    means the description of your app.
+    An object that describes your application
+
+    State lives in the parent component that passes "state" to different components
+
+Methods
+    When making your own methods on a component, use arrow functions instead of
+    using a regular function syntax
+
+Children
+    using 'props.children', you can create components that wrap other components
+
+containers (folder)
+    has the class syntax and lifestyle hooks, has state in them

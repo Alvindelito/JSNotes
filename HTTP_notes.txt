@@ -1,0 +1,33 @@
+HTTP:
+
+    GET: you ask to get something and the server responds with that request
+    POST: sending over some data to the server
+    PUT: update data that already exists
+    DELETE: delete piece of data from the servers or back-end
+
+JSON: JavaScript Object Notation
+    is a syntax for storing and exchanging data
+    is text, written with javascript object notation
+    can convert any javascript object to JSON and vice versa
+
+    JSON.parse()
+        Example: var obj = JSON.parse('{"name":"John","age":30, "city":"New York"}');
+
+    JSON.stringify()
+        Example: var myJSON = JSON.stringify(obj);
+
+AJAX: Transfer data between the server and client in real-time
+    Able to make Single page applications (SPA) with AJAX using fetch/promises
+
+Promise - an object that may produce a single value some time in the future
+    Either a resolved value, or a reason that it's not resolved (rejected)
+
+    A promise may be in one of 3 possible states:
+    -Fulfilled
+    -Rejected
+    -Pending
+
+    Are good for asynchronous programming
+
+    Promise.all() takes an array of promises
+
